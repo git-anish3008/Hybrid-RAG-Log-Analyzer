@@ -6,7 +6,7 @@ Recently, I started learning about LLMs and RAG (Retrieval-Augmented Generation)
 
 You simply cannot copy-paste corporate Intune logs into ChatGPT or cloud-based AI tools. Those files are packed with sensitive device identifiers, internal network configurations, and sometimes user data. If that telemetry leaves your environment, your security and compliance teams will have a heart attack (and rightly so!).
 
-I needed a solution of my own—an AI that actually understands Intune architecture, but runs entirely on my local machine where the data never leaves the device.
+I needed a solution of my own an AI that actually understands Intune architecture, but runs entirely on my local machine where the data never leaves the device.
 
 So, I went down the AI rabbit hole and built this. It is a fully local, privacy-first AI diagnostic tool that cross-references Intune logs against IT runbooks to figure out what broke. I am still relatively new to building AI architectures, so the code might not be 100% perfect, but it solves a massive real-world problem for platform engineers who need AI without compromising security.
 
