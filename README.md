@@ -2,7 +2,7 @@
 
 > Local RAG diagnostic engine for Intune Win32 app deployment failures. Built because I was tired of grepping through 4 log files at 2 AM.
 
-![Architecture](assets/architecture.png)
+![Architecture](assets/Workflow of the whole tool.png)
 
 ## Why I Built This
 
