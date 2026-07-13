@@ -2,7 +2,7 @@
 
 > Local RAG diagnostic engine for Intune Win32 app deployment failures. Built because I was tired of grepping through 4 log files at 2 AM.
 
-![Architecture](assets/https://github.com/git-anish3008/Hybrid-RAG-Log-Analyzer/blob/main/assets/Workflow%20of%20the%20whole%20tool.png)
+![Workflow of the whole tool](../assets/Workflow of the whole tool.png)
 
 ## Why I Built This
 
@@ -57,7 +57,7 @@ Response + Source Citations
 
 ```bash
 # 1. Clone
-git clone https://github.com/yourname/intune-win32-troubleshooter.git
+git clone https://github.com/git-anish3008/Hybrid-RAG-Log-Analyzer.git
 cd intune-win32-troubleshooter
 
 # 2. Install deps
