@@ -1,0 +1,54 @@
+# Win32 App Packaging Runbook
+
+## 1. Applicability Rules
+Before Intune even attempts to install an app, it checks applicability rules. These determine whether the app should be offered to the device based on:
+- Operating system version
+- Architecture (x64 vs ARM64)
+- Disk space requirements
+
+Common failure: The app is packaged for Windows 10 but the device runs Windows 11. The applicability rule blocks installation silently.
+
+## 2. Detection Rules
+Detection rules determine whether the app is already installed. Intune checks:
+- Registry keys
+- File existence
+- MSI product codes
+
+If detection says "already installed," Intune skips everything else. Even if the app is actually broken.
+
+Common failure: Detection rule checks for C:\Program Files\MyApp\app.exe but the installer puts it in C:\Program Files (x86)\. Intune thinks it's installed, user sees nothing.
+
+## 3. Download Phase
+Intune uses BITS (Background Intelligent Transfer Service) to download the .intunewin file.
+
+Common failures:
+- Network proxy blocking BITS
+- Storage full (need ~2x the app size free)
+- Corrupt .intunewin package
+
+## 4. Decryption
+The .intunewin file is encrypted. Intune decrypts it using a key stored in the Intune service.
+
+Common failure: Package was re-uploaded but the client still has the old encryption key. Decryption fails with generic error.
+
+## 5. Execution
+The installer runs with SYSTEM privileges.
+
+Common failures:
+- Installer requires interactive UI (blocked by SYSTEM context)
+- Missing dependencies (VC++ redist, .NET Framework)
+- Exit code 1603 (generic MSI failure -- check logs for real reason)
+
+## 6. Reporting
+Intune reports status back to the service. This can take 5-15 minutes.
+
+Common failure: Reporting succeeds but the app actually failed. User sees "Installed" in Company Portal but app doesn't work. This is a detection rule problem, not an execution problem.
+
+## Troubleshooting Checklist
+
+1. Check IntuneManagementExtension.log for the App ID
+2. Look for phase transitions (Applicability -> Detection -> etc.)
+3. If stuck in Detection, verify detection rule manually on device
+4. If Download fails, check BITS status: bitsadmin /list /allusers
+5. If Execution fails, run installer manually as SYSTEM using PsExec
+6. Always check AgentExecutor.log for PowerShell script errors

@@ -1,0 +1,16 @@
+<![LOG[Win32App App id: 12345678-1234-1234-1234-123456789abc]LOG]!><time="08:15:23.456+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
+<![LOG[    Applicability check for app started.]LOG]!><time="08:15:23.512+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
+<![LOG[    OS requirement check passed.]LOG]!><time="08:15:23.589+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
+<![LOG[    DetectionManager: Checking if app is already installed.]LOG]!><time="08:15:24.102+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
+<![LOG[    Detection rule: File C:\Program Files\MyApp\app.exe does not exist.]LOG]!><time="08:15:24.205+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
+<![LOG[    App is not installed. Proceeding to download.]LOG]!><time="08:15:24.301+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
+<![LOG[    Starting BITS job for download. URL: https://cm01.contoso.com/...]LOG]!><time="08:15:25.001+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
+<![LOG[    Download progress: 0%]LOG]!><time="08:15:25.105+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
+<![LOG[    Download progress: 45%]LOG]!><time="08:15:28.789+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
+<![LOG[    Download progress: 100%]LOG]!><time="08:15:31.456+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
+<![LOG[    Decrypting .intunewin package.]LOG]!><time="08:15:31.567+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
+<![LOG[    Decryption successful.]LOG]!><time="08:15:32.123+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
+<![LOG[    Executing installer: setup.exe /quiet /norestart]LOG]!><time="08:15:32.234+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
+<![LOG[    Installer exited with code 1603.]LOG]!><time="08:15:45.678+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="3" thread="12" file="">
+<![LOG[    Execution failed. Reporting failure to Intune service.]LOG]!><time="08:15:45.789+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="3" thread="12" file="">
+<![LOG[    StatusService: Reporting state 3 (Failed) for app 12345678-1234-1234-1234-123456789abc]LOG]!><time="08:15:46.001+00:00" date="07-10-2026" component="IntuneManagementExtension" context="" type="1" thread="12" file="">
