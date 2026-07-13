@@ -116,10 +116,6 @@ streamlit run app.py
 - Uploaded files are saved to `./temp_data/` and can be deleted after use.
 - Designed for environments where you legally cannot paste logs into ChatGPT.
 
-## License
-
-MIT. Do whatever you want. If you improve it, send a PR.
-
 ## About Me
 
 6 years in Intune/Endpoint Management. Self-taught Python. This is my first "real" AI project -- built it to solve a problem I actually have, not to pad a resume. If you find bugs, open an issue. I probably caused them.
