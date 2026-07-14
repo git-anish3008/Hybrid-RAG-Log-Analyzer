@@ -88,7 +88,7 @@ streamlit run app.py
 
 ## Screenshots
 
-![Dashboard](assets/Demo.png)
+![Dashboard](sample_data/Demo.png)
 
 ## Tech Stack
 
