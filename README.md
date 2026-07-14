@@ -55,9 +55,17 @@ Response + Source Citations
 - [Ollama](https://ollama.com) installed and running
 - A model pulled (tested with `qwen2.5:3b`, also works with `llama3.2`, `phi4`)
 
+### About the Database
+This app uses **Qdrant in file-based mode**. It stores vectors directly on your disk at `./local_intune_db/` — no Docker container, no separate server, no setup. Just run the app and it creates the database automatically.
+
+If you want to use Qdrant as a server (for multi-user or persistent shared storage), you can run it via Docker:
 ```bash
+docker run -p 6333:6333 -v $(pwd)/qdrant_storage:/qdrant/storage qdrant/qdrant
+
+```bash
+
 # 1. Clone
-git clone https://github.com/git-anish3008/Hybrid-RAG-Log-Analyzer.git
+git clone https://github.com/yourname/intune-win32-troubleshooter.git
 cd intune-win32-troubleshooter
 
 # 2. Install deps
@@ -80,7 +88,7 @@ streamlit run app.py
 
 ## Screenshots
 
-*(Will add once I clean up the UI a bit -- right now it's functional but ugly)*
+![Dashboard](assets/Demo.png)
 
 ## Tech Stack
 
