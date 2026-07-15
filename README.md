@@ -6,6 +6,12 @@
 
 ## Why I Built This
 
+The very first time I read about RAG, the first thing that struck me was: "This is perfect for log analysis." LLMs are pattern recognition machines. Logs are pure patterns timestamps, error codes, phase transitions, failure signatures. Seemed like an obvious match.
+
+So I looked. Scrolled LinkedIn. Searched GitHub. Asked around. Nothing. No one had built a local RAG tool specifically for Intune Win32 troubleshooting. Plenty of chatbots. Plenty of generic log parsers. But nothing that combined domain-specific retrieval with local inference for this exact problem.
+
+That was the trigger. If no one else was going to build it, I would.
+
 If you've ever troubleshooted Win32 app deployments in Intune, you know the pain:
 - `IntuneManagementExtension.log` 
 - `AppWorkload.log`
