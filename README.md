@@ -65,6 +65,7 @@ Response + Source Citations
 This app uses **Qdrant in file-based mode**. It stores vectors directly on your disk at `./local_intune_db/` — no Docker container, no separate server, no setup. Just run the app and it creates the database automatically.
 
 If you want to use Qdrant as a server (for multi-user or persistent shared storage), you can run it via Docker:
+
 ```bash
 docker run -p 6333:6333 -v $(pwd)/qdrant_storage:/qdrant/storage qdrant/qdrant
 
@@ -89,7 +90,7 @@ streamlit run app.py
 
 1. **Upload logs** in the sidebar (`.log` files from `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`)
 2. **Upload a runbook** (`.txt` file explaining your Win32 packaging standards)
-3. Click **Initialize Agent** -- this builds the vector indexes (takes ~30-60s for large logs)
+3. Click **Initialize Agent** this builds the vector indexes (takes ~30-60s for large logs)
 4. Chat away in the main window
 
 ## Screenshots
@@ -103,7 +104,7 @@ streamlit run app.py
 | Streamlit | Web UI (quick and dirty, I'm not a frontend dev) |
 | LangGraph | Orchestration -- deterministic workflow, not just "call LLM and pray" |
 | Qdrant | Local vector DB for embeddings |
-| FastEmbed | Local embeddings (BAAI/bge-small-en-v1.5) -- no API calls |
+| FastEmbed | Local embeddings (BAAI/bge-small-en-v1.5) - no API calls |
 | BM25Okapi | Keyword retrieval for error codes and GUIDs |
 | Ollama | Local LLM inference |
 
@@ -121,7 +122,6 @@ streamlit run app.py
 - [ ] Support `.evtx` on Linux via python-evtx parser
 - [ ] Add export button (PDF/txt of the conversation for ticket documentation)
 - [ ] Better error handling when Ollama isn't running
-- [ ] Maybe a dark mode? Streamlit makes this surprisingly hard
 - [ ] Docker container for one-command deployment
 
 ## Security Notes
@@ -132,4 +132,4 @@ streamlit run app.py
 
 ## About Me
 
-6 years in Intune/Endpoint Management. Self-taught Python. This is my first "real" AI project -- built it to solve a problem I actually have, not to pad a resume. If you find bugs, open an issue. I probably caused them.
+6 years in Intune/Endpoint Management. Self-taught Python. This is my first "real" AI project built it to solve a problem I actually have, not to pad a resume. If you find bugs, open an issue. I probably caused them.
