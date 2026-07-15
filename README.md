@@ -1,4 +1,4 @@
-# Intune Win32 Troubleshooter
+# Intune Dual-Source RAG Engine
 
 > Local RAG diagnostic engine for Intune Win32 app deployment failures. Built because I was tired of grepping through 4 log files at 2 AM.
 
